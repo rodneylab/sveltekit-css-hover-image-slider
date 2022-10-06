@@ -1,0 +1,32 @@
+{
+	"machu-picchu": {
+		"title": "Machu Picchu, Perú",
+		"alt": "Intricately carved Inca ruins at Machu Picchu balanced atop a mountain top backed by Waynu Picchu and other Andes mountain peaks",
+		"source": "https://unsplash.com/photos/rFESpq5MMTg",
+		"credit": { "name": "Eddie Kiszka", "profile": "https://unsplash.com/@eddiekiszka" }
+	},
+	"palenque": {
+		"title": "Palenque, México",
+		"alt": "Palenque Mayan temple dwarfs visitors amid green grass strong Méxican sunlight",
+		"source": "https://unsplash.com/photos/eLqm1qHJJgI",
+		"credit": { "name": "Crisoforo Gaspar Hernandez", "profile": "https://unsplash.com/@mitogh" }
+	},
+	"peten": {
+		"title": "Petén, Guatemala",
+		"alt": "Imense Mayan ruins with steep steps to left and behind border an open area with rustic buildings with straw roofs",
+		"source": "https://unsplash.com/photos/eoZTnFtusDs",
+		"credit": { "name": "Jimmy Baum", "profile": "https://unsplash.com/@amongthestones" }
+	},
+	"petra": {
+		"title": "Petra, Jordan",
+		"alt": "Huge edifice carved into rock face towers above two people dressed in medieval armour as dusk approaches",
+		"source": "https://unsplash.com/photos/eoZTnFtusDs",
+		"credit": { "name": "Brian Kairuz", "profile": "https://unsplash.com/@briankairuz" }
+	},
+	"stonehenge": {
+		"title": "StoneHenge, United Kingdom",
+		"alt": "Desserted Stonehenge amid, with lush, green grass in the foreground and bright, albeit overcast skies",
+		"source": "https://unsplash.com/photos/oQ9pECond48",
+		"credit": { "name": "K. Mitch Hodge", "profile": "https://unsplash.com/@kmitchhodge" }
+	}
+}
