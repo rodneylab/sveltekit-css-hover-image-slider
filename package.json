@@ -16,7 +16,6 @@
 	},
 	"devDependencies": {
 		"@fontsource/figtree": "^4.5.1",
-		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@types/postcss-preset-env": "^7.7.0",
 		"@types/sharp": "^0.31.0",
@@ -57,5 +56,8 @@
 	},
 	"bugs": {
 		"url": "https://github.com/rodneylab/sveltekit-css-hover-image-slider/issues"
+	},
+	"dependencies": {
+		"@sveltejs/adapter-node": "1.0.0-next.96"
 	}
 }
