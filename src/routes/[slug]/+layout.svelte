@@ -1,0 +1,77 @@
+<script lang="ts">
+	import '@fontsource/figtree';
+</script>
+
+<slot />
+
+<style lang="postcss">
+	:global(*, *:after, *:before) {
+		box-sizing: border-box;
+	}
+
+	:global(body) {
+		min-height: 100vh;
+		font-family: var(--font-family-body);
+		background: var(--colour-brand);
+
+		/* CREDIT: https://www.joshwcomeau.com/gradient-generator/ */
+		background-image: linear-gradient(
+			30deg,
+			hsl(221deg 51% 16%) 0%,
+			hsl(222deg 39% 20%) 38%,
+			hsl(223deg 31% 23%) 50%,
+			hsl(223deg 25% 27%) 58%,
+			hsl(222deg 21% 31%) 64%,
+			hsl(222deg 21% 31%) 69%,
+			hsl(223deg 25% 27%) 73%,
+			hsl(223deg 31% 23%) 78%,
+			hsl(222deg 39% 20%) 84%,
+			hsl(221deg 51% 16%) 100%
+		);
+	}
+
+	:root {
+		--lerp-0: 1;
+		--lerp-1: 0.5625;
+		--lerp-2: 0.25;
+		--lerp-3: 0.0625;
+		--lerp-4: 0;
+
+		--spacing-px: 1px;
+		--spacing-px-2: 2px;
+		--spacing-1: 0.25rem;
+		--spacing-2: 0.5rem;
+		--spacing-4: 1rem;
+		--spacing-5: 1.25rem;
+		--spacing-6: 1.5rem;
+		--spacing-12: 3rem;
+		--spacing-24: 6rem;
+		--spacing-32: 8rem;
+		--spacing-outer: max(var(--spacing-6), 5vw);
+		--max-width-container-lg: 64rem;
+		--max-width-wrapper: var(--max-width-container-lg);
+		--max-width-full: 100%;
+
+		/* font sizes */
+		--font-size-5: 2.441rem;
+
+		/* font weights */
+		--font-weight-bold: bold;
+
+		/* font families */
+		--font-family-body: Figtree;
+
+		--colour-dark: hsl(0deg 0% 0%); /* black */
+		--colour-light: hsl(0deg 0% 90%); /* mercury */
+		--colour-theme: hsl(221deg 51% 16%); /* big stone */
+		--colour-alt: hsl(30deg 1% 47%); /* concord */
+		--colour-brand: hsl(180deg 8% 45%); /* sirocco */
+
+		/* CREDIT: https://www.joshwcomeau.com/shadow-palette/*/
+		--shadow-color: 224deg 67% 6%;
+		--shadow-elevation-medium: -1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
+			-3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
+			-8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
+			-20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
+	}
+</style>

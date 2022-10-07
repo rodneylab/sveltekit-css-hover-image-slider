@@ -2,25 +2,29 @@ import type { PageServerLoad } from './$types';
 import imageMeta from '$lib/data/images.json';
 import { join } from 'node:path';
 import { error } from '@sveltejs/kit';
-import { base64 } from '$lib/utilities/image.server';
+import { base64, hash } from '$lib/utilities/image.server';
 
-export const load: PageServerLoad = async function load({ url }) {
+export const load: PageServerLoad = async function load({ params }) {
 	try {
-		const { searchParams } = url;
-		const imageSlug = searchParams.get('image') ?? '';
+		const { slug: imageSlug } = params;
 
-		const imagesFiles = import.meta.glob('../assets/*.jpg');
+		const imagesFiles = import.meta.glob('../../assets/*.jpg');
 		const images = await Promise.all(
 			Object.keys(imagesFiles).map(async (path) => {
 				const src = path.split('/').at(-1);
+				if (!src) throw error(404, 'Not found');
+
 				const [slug] = src?.split('.') ?? '';
 				// @ts-expect-error use slug as index on JSON object
-				const { alt, title } = imageMeta[slug];
-				const placeholder = src && (await base64(join('src/assets', src), 10));
-				return { alt, title, placeholder, slug, src: `/assets/${src}` };
+				const { alt, title }: { alt: string; title: string } = imageMeta[slug];
+				const imageHash = hash(join('src/assets', src));
+				const placeholder = await base64(join('src/assets', src), 10);
+				return { alt, title, placeholder, slug, src: `/assets/${imageHash}/${src}` };
 			})
 		);
-		const image = imageSlug ? { ...images.find(({ slug }) => slug === imageSlug) } : {};
+		const image = images.find(({ slug }) => slug === imageSlug);
+		if (!image) throw error(404, 'Not found');
+
 		return {
 			image,
 			images
