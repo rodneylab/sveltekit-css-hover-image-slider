@@ -8,7 +8,7 @@ const config = {
 	preprocess: preprocess({ postcss: true }),
 
 	kit: {
-		adapter: adapter({ out: 'app' })
+		adapter: adapter({ precompress: true })
 	}
 };
 
