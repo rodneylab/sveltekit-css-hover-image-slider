@@ -61,6 +61,8 @@
 </nav>
 
 <style lang="postcss">
+	/* Based on Jhey Thompkins CodePen: https://codepen.io/jh3y/pen/mdxggmO */
+
 	.thumbnails {
 		display: flex;
 		position: absolute;
@@ -74,6 +76,9 @@
 		align-items: center;
 		justify-content: center;
 		max-width: 100%;
+
+		overflow: auto;
+		scroll-snap-type: x mandatory;
 	}
 
 	.thumbnails:hover,
@@ -92,6 +97,8 @@
 		position: relative;
 		min-height: var(--spacing-12);
 		aspect-ratio: 16 /9;
+
+		scroll-snap-align: center;
 	}
 
 	.thumbnail:after {
