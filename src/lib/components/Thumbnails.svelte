@@ -12,9 +12,9 @@
 	export let currentSlug: string;
 
 	const densities = [1.0, 2.0];
-	const THUMBNAIL_SIZES = [283, 542];
+	const THUMBNAIL_SIZES = [144, 307, 542];
 	const thumbnailSizes =
-		'(max-width: 768px) 307px, (max-width: 1024px) 287px, (max-width: 1280px) 400px, 542px';
+		'(max-width: 768px) 40vw, (max-width: 1024px) 287px, (max-width: 1280px) 400px, 542px';
 </script>
 
 <nav class="thumbnails">
