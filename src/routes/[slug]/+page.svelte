@@ -1,8 +1,6 @@
 <script lang="ts">
-	import Thumbnails from '$lib/components/Thumbnails.svelte';
 	import Image from '$lib/components/Image.svelte';
-
-	import '@fontsource/figtree';
+	import Thumbnails from '$lib/components/Thumbnails.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -21,9 +19,8 @@
 	<div class="wrapper">
 		<h1 class="heading">SvelteKit CSS-only :hover Image Gallery</h1>
 		<section class="preview-container">
-			{#if image.src}<Image {image} />{/if}
+			<Image {image} />
 		</section>
-
 		<div class="thumbnails-wrapper">
 			<Thumbnails {currentSlug} {images} />
 		</div>
