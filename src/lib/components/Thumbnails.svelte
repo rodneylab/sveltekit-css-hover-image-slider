@@ -117,7 +117,7 @@
 	.thumbnail-item {
 		width: 40vw;
 		height: auto;
-		aspect-ratio: 16 / 9;
+		aspect-ratio: 16 / 10;
 		border-radius: var(--spacing-1);
 
 		@media (width > 48rem) {

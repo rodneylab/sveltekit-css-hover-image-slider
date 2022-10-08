@@ -69,7 +69,7 @@
 		box-shadow: var(--shadow-elevation-medium);
 		outline: var(--spacing-px) solid var(--colour-brand);
 		max-width: 100%;
-		aspect-ratio: 16/ 9;
+		aspect-ratio: 16 / 10;
 		height: auto;
 	}
 
