@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<title>{image.title}</title>
-	<meta title="description" content="SvelteKit CSS-only :hover Image Gallery" />
+	<meta name="description" content="SvelteKit CSS-only :hover Image Gallery" />
 </svelte:head>
 
 <main class="container">
@@ -57,7 +57,7 @@
 
 	.preview-container {
 		grid-area: preview;
-		aspect-ratio: 16 / 9;
+		aspect-ratio: 16 / 10;
 		border-radius: var(--spacing-px-2);
 		margin-bottom: var(--spacing-6);
 		max-width: 100%;
