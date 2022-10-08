@@ -36,6 +36,17 @@
 		'(max-width: 768px) 100vw, (max-width: 1024px) 672px, (max-width: 1280px) 768px, 1024px';
 </script>
 
+<svelte:head>
+	<link
+		rel="preload"
+		as="image"
+		href={src}
+		imagesrcset={avifSrcset}
+		imagesizes={sizes}
+		fetchpriority="high"
+	/>
+</svelte:head>
+
 <picture>
 	<source {sizes} srcset={avifSrcset} type="image/avif" width={1024} height={576} />
 	<source {sizes} srcset={webpSrcset} type="image/webp" width={1024} height={576} />

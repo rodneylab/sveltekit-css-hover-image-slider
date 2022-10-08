@@ -13,6 +13,7 @@
 
 <svelte:head>
 	<title>{image.title}</title>
+	<meta title="description" content="SvelteKit CSS-only :hover Image Gallery" />
 </svelte:head>
 
 <main class="container">
