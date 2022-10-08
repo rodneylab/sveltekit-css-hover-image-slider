@@ -13,7 +13,7 @@
 	let { alt, src } = image;
 
 	const densities = [1.0, 2.0];
-	const SIZES = [374, 768, 1024];
+	const SIZES = [374, 672, 768, 1024];
 	const avifSrcset = getSrcset({
 		densities,
 		format: 'avif',
@@ -32,7 +32,8 @@
 		sizes: SIZES,
 		src
 	});
-	const sizes = '(max-width: 1024px) 100vw, 1024px';
+	const sizes =
+		'(max-width: 768px) 100vw, (max-width: 1024px) 672px, (max-width: 1280px) 768px, 1024px';
 </script>
 
 <picture>

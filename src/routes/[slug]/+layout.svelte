@@ -10,6 +10,7 @@
 	}
 
 	:global(body) {
+		margin: var(--spacing-0);
 		min-height: 100vh;
 		font-family: var(--font-family-body);
 		background: var(--colour-brand);
@@ -39,6 +40,7 @@
 
 		--spacing-px: 1px;
 		--spacing-px-2: 2px;
+		--spacing-0: 0;
 		--spacing-1: 0.25rem;
 		--spacing-2: 0.5rem;
 		--spacing-4: 1rem;
@@ -47,10 +49,22 @@
 		--spacing-12: 3rem;
 		--spacing-24: 6rem;
 		--spacing-32: 8rem;
-		--spacing-outer: max(var(--spacing-6), 5vw);
-		--max-width-container-lg: 64rem;
-		--max-width-wrapper: var(--max-width-container-lg);
+		--spacing-outer: var(--spacing-4);
+		--max-width-container-sm: 42rem; /* 672px */
+		--max-width-container-md: 48rem; /* 768px */
+		--max-width-container-lg: 64rem; /* 1024px */
+		--max-width-container-xl: 80rem; /* 1280px */
 		--max-width-full: 100%;
+
+		--_max-width-wrapper: var(--max-width-container-sm);
+
+		@media (width > 64rem) {
+			--_max-width-wrapper: var(--max-width-container-md);
+		}
+
+		@media (width > 80rem) {
+			--_max-width-wrapper: var(--max-width-container-lg);
+		}
 
 		/* font sizes */
 		--font-size-5: 2.441rem;

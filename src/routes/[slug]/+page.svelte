@@ -42,15 +42,15 @@
 		grid-template-columns: 100%;
 		grid-template-areas: 'preview' 'thumbnails' 'heading';
 		grid-template-rows: auto auto auto;
-		width: min(calc(48rem - var(--spacing-outer)), var(--max-width-wrapper));
-		margin: var(--spacing-6) var(--spacing-outer) var(--spacing-24);
+		width: calc(var(--max-width-full) - var(--spacing-12));
+		padding: var(--spacing-6) var(--spacing-outer) var(--spacing-24);
 		max-width: var(--max-width-full);
 	}
 
 	@media (width > 48rem) {
 		.wrapper {
-			margin: var(--spacing-6) auto var(--spacing-24);
-			width: min(var(--max-width-full) - var(--spacing-24), var(--max-width-wrapper));
+			padding: var(--spacing-6) auto var(--spacing-24);
+			width: min(var(--max-width-full), var(--_max-width-wrapper));
 		}
 	}
 
