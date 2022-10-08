@@ -1,4 +1,10 @@
 {
+	"name": "SvelteKit CSS-only :hover Image Gallery",
+	"short_name": " :hover Gallery",
+	"start_url": "/index.html",
+	"background_color": "#141B29",
+	"theme_color": "#787777",
+	"display": "standalone",
 	"icons": [
 		{ "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
 		{ "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
