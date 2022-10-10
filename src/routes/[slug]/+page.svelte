@@ -66,15 +66,27 @@
 	.thumbnails-wrapper {
 		grid-area: thumbnails;
 		position: relative;
-		min-height: var(--spacing-32);
+		min-height: var(--spacing-28);
+
+		@media (width > 80rem) {
+			min-height: var(--spacing-36);
+		}
 	}
 
 	h1 {
 		grid-area: heading;
 		color: var(--colour-light);
-		font-size: var(--font-size-5);
+		font-size: var(--font-size-3);
 		font-weight: var(--font-weight-bold);
 		text-align: right;
 		width: var(--max-width-full);
+
+		@media (width > 42rem) {
+			font-size: var(--font-size-4);
+		}
+
+		@media (width > 64rem) {
+			font-size: var(--font-size-5);
+		}
 	}
 </style>

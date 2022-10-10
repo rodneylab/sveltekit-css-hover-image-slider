@@ -48,7 +48,8 @@
 		--spacing-6: 1.5rem;
 		--spacing-12: 3rem;
 		--spacing-24: 6rem;
-		--spacing-32: 8rem;
+		--spacing-28: 7rem;
+		--spacing-36: 9rem;
 		--spacing-outer: var(--spacing-4);
 		--max-width-container-sm: 42rem; /* 672px */
 		--max-width-container-md: 48rem; /* 768px */
@@ -67,6 +68,8 @@
 		}
 
 		/* font sizes */
+		--font-size-3: 1.266rem;
+		--font-size-4: 1.424rem;
 		--font-size-5: 2.441rem;
 
 		/* font weights */
