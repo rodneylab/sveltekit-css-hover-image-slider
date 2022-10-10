@@ -1,9 +1,9 @@
 import { error } from '@sveltejs/kit';
-import type { Readable } from 'node:stream';
 import { createReadStream, statSync } from 'node:fs';
+import type { Readable } from 'node:stream';
+import { PassThrough } from 'node:stream';
 import { join } from 'path';
 import sharp from 'sharp';
-import { PassThrough } from 'node:stream';
 import type { RequestHandler } from './$types';
 
 async function metadata(
