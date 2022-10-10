@@ -81,9 +81,29 @@
 		scroll-snap-type: x mandatory;
 		padding: var(--spacing-4);
 		scroll-padding: var(--spacing-4);
+
+		/* justify-content: center;
+		align-items: center;
+
+		place-content: center; */
+	}
+
+	.thumbnails::-webkit-scrollbar {
+		background: transparent;
+	}
+
+	.thumbnails::-webkit-scrollbar-thumb {
+		background: var(--colour-alt);
+		border-radius: var(--spacing-2);
+	}
+
+	.thumbnails::-webkit-scrollbar-track {
+		background: var(--colour-dark);
+		border-radius: var(--spacing-2);
 	}
 
 	.thumbnail {
+		/* padding-block: auto; */
 		@media (width > 48rem) {
 			outline: none;
 			height: auto;
@@ -219,6 +239,10 @@
 
 	a {
 		color: var(--colour-alt);
+	}
+
+	picture {
+		display: flex;
 	}
 
 	img {
