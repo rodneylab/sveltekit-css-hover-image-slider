@@ -223,7 +223,6 @@
 
 	img {
 		background-position: center center;
-		background-size: cover;
 		background-repeat: no-repeat;
 	}
 </style>
