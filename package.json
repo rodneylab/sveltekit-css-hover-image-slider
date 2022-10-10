@@ -27,7 +27,6 @@
 		"eslint": "^8.25.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"gsap": "^3.11.3",
 		"husky": "^8.0.1",
 		"postcss": "^8.4.17",
 		"postcss-env-function": "^4.0.6",
