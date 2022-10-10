@@ -1,5 +1,5 @@
 {
-	"name": "SvelteKit CSS-only :hover Image Gallery",
+	"name": "CSS only Hover Lightbox",
 	"short_name": " :hover Gallery",
 	"start_url": "/index.html",
 	"background_color": "#141B29",
