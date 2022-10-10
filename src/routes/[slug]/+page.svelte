@@ -12,16 +12,16 @@
 </script>
 
 <svelte:head>
-	<title>{image.title} | CSS only Hover Lightbox</title>
+	<title>{image.title} | Svelte CSS Image Slider</title>
 	<meta
 		name="description"
-		content="CSS-only hover lightbox: how to create a CSS :hover preview image gallery with mobile bouncing slider using future CSS and SvelteKit."
+		content="Svelte CSS image slider: how to create a CSS :hover preview image gallery with mobile bouncing overscroll using future CSS and SvelteKit."
 	/>
 </svelte:head>
 
 <main class="container">
 	<div class="wrapper">
-		<h1 class="heading">CSS only :hover Lightbox</h1>
+		<h1 class="heading">Svelte CSS Image Slider</h1>
 		<section class="preview-container">
 			<Image {image} />
 		</section>

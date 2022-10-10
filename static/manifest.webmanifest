@@ -1,6 +1,6 @@
 {
-	"name": "CSS only Hover Lightbox",
-	"short_name": " :hover Gallery",
+	"name": "Svelte CSS Image Slider",
+	"short_name": "Image Slider",
 	"start_url": "/index.html",
 	"background_color": "#141B29",
 	"theme_color": "#787777",
