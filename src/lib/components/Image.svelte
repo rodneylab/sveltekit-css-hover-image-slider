@@ -98,7 +98,6 @@
 	}
 
 	figcaption a {
-		/* color: inherit; */
-		color: var(--colour-brand);
+		color: inherit;
 	}
 </style>
