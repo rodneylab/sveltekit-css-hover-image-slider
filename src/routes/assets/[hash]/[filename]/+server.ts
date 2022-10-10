@@ -43,6 +43,7 @@ function resize(imageStream: Readable, width: number, format: string): ReturnTyp
 	return new Response(passthroughStream as unknown);
 }
 
+// Based on: https://github.com/remix-run/examples/blob/main/image-resize/app/routes/assets/resize/%24.ts
 export const GET: RequestHandler = async function get({ params, url, setHeaders }) {
 	try {
 		const { filename } = params;

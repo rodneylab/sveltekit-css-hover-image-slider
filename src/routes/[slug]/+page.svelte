@@ -35,15 +35,15 @@
 	.container {
 		display: grid;
 		place-items: center;
-		grid-template-columns: 100%;
+		grid-template-columns: var(--max-width-full);
 		min-height: 100vh;
-		width: 100%;
+		width: var(--max-width-full);
 		padding-top: var(--spacing-12);
 	}
 
 	.wrapper {
 		display: grid;
-		grid-template-columns: 100%;
+		grid-template-columns: var(--max-width-full);
 		grid-template-areas: 'preview' 'thumbnails' 'heading';
 		grid-template-rows: auto auto auto;
 		width: calc(var(--max-width-full) - var(--spacing-12));

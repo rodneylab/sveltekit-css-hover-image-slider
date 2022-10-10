@@ -1,6 +1,6 @@
-import sharp from 'sharp';
 import crypto from 'node:crypto';
 import { readFileSync } from 'node:fs';
+import sharp from 'sharp';
 
 export async function base64(imageSource: string, width = 10): Promise<string> {
 	const image = sharp(imageSource);

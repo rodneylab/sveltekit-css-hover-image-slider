@@ -81,11 +81,6 @@
 		scroll-snap-type: x mandatory;
 		padding: var(--spacing-4);
 		scroll-padding: var(--spacing-4);
-
-		/* justify-content: center;
-		align-items: center;
-
-		place-content: center; */
 	}
 
 	.thumbnails::-webkit-scrollbar {
@@ -131,7 +126,7 @@
 	.overscroller {
 		display: block;
 		inline-size: 15vw;
-		flex-shrink: 0;
+		flex: 0 0 auto;
 	}
 
 	.thumbnail-item {
