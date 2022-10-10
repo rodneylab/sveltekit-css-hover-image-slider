@@ -16,10 +16,15 @@ export const load: PageServerLoad = async function load({ params }) {
 
 				const [slug] = src?.split('.') ?? '';
 				// @ts-expect-error use slug as index on JSON object
-				const { alt, title }: { alt: string; title: string } = imageMeta[slug];
+				const {
+					alt,
+					credit,
+					title
+				}: { alt: string; credit: { name: string; profile: string }; title: string } =
+					imageMeta[slug];
 				const imageHash = hash(join('src/assets', src));
 				const placeholder = await base64(join('src/assets', src), 10);
-				return { alt, title, placeholder, slug, src: `/assets/${imageHash}/${src}` };
+				return { alt, credit, placeholder, slug, src: `/assets/${imageHash}/${src}`, title };
 			})
 		);
 		const image = images.find(({ slug }) => slug === imageSlug);

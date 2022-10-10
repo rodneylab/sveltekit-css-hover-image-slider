@@ -4,13 +4,18 @@
 
 	export let image: {
 		alt: string;
+		credit: { name: string; profile: string };
 		title: string;
 		placeholder: string;
 		slug: string;
 		src: string;
 	};
 
-	let { alt, src } = image;
+	let {
+		alt,
+		credit: { name: artist, profile },
+		src
+	} = image;
 
 	const densities = [1.0, 2.0];
 	const SIZES = [280, 374, 672, 768, 1024];
@@ -47,21 +52,24 @@
 	/>
 </svelte:head>
 
-<picture>
-	<source {sizes} srcset={avifSrcset} type="image/avif" width={1024} height={576} />
-	<source {sizes} srcset={webpSrcset} type="image/webp" width={1024} height={576} />
-	<source {sizes} srcset={jpgSrcset} type="image/jpeg" width={1024} height={576} />
-	<img
-		style:background="url('{image.placeholder}')"
-		style:background-size="cover"
-		class="preview"
-		{alt}
-		src={`${src}?w=1024`}
-		width={1024}
-		height={576}
-		fetchpriority="high"
-	/>
-</picture>
+<figure>
+	<picture>
+		<source {sizes} srcset={avifSrcset} type="image/avif" width={1024} height={576} />
+		<source {sizes} srcset={webpSrcset} type="image/webp" width={1024} height={576} />
+		<source {sizes} srcset={jpgSrcset} type="image/jpeg" width={1024} height={576} />
+		<img
+			style:background="url('{image.placeholder}')"
+			style:background-size="cover"
+			class="preview"
+			{alt}
+			src={`${src}?w=1024`}
+			width={1024}
+			height={576}
+			fetchpriority="high"
+		/>
+	</picture>
+	<figcaption>CREDIT: <a href={profile}>{artist}</a></figcaption>
+</figure>
 
 <style lang="postcss">
 	.preview {
@@ -73,9 +81,24 @@
 		height: auto;
 	}
 
+	figure {
+		margin: var(--spacing-0);
+	}
+
 	img {
 		background-position: center center;
-		background-size: cover;
 		background-repeat: no-repeat;
+	}
+
+	figcaption {
+		width: var(--max-width-full);
+		text-align: right;
+		margin-top: var(--spacing-2);
+		color: var(--colour-light);
+	}
+
+	figcaption a {
+		/* color: inherit; */
+		color: var(--colour-brand);
 	}
 </style>
