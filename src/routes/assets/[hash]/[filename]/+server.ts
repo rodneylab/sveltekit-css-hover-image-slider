@@ -71,6 +71,7 @@ export const GET: RequestHandler = async function get({ params, url, setHeaders 
 
 		setHeaders({
 			'Content-Type': `image/${outputFormat}`,
+			'Content-Disposition': `filename= ${filename.split('.')[0]}.${outputFormat}`,
 			'Cache-Control': 'public, max-age=31536000, immutable'
 		});
 
