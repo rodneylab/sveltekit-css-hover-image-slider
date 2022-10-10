@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@commitlint/config-conventional': ^17.1.0
   '@fontsource/figtree': ^4.5.1
   '@sveltejs/adapter-node': 1.0.0-next.96
   '@sveltejs/kit': next
@@ -36,6 +37,7 @@ dependencies:
   sharp: 0.31.1
 
 devDependencies:
+  '@commitlint/config-conventional': 17.1.0
   '@fontsource/figtree': 4.5.1
   '@sveltejs/adapter-node': 1.0.0-next.96
   '@sveltejs/kit': 1.0.0-next.511_svelte@3.50.1+vite@3.1.7
@@ -107,6 +109,13 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
+    dev: true
+
+  /@commitlint/config-conventional/17.1.0:
+    resolution: {integrity: sha512-WU2p0c9/jLi8k2q2YrDV96Y8XVswQOceIQ/wyJvQxawJSCasLdRB3kUIYdNjOCJsxkpoUlV/b90ZPxp1MYZDiA==}
+    engines: {node: '>=v14'}
+    dependencies:
+      conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
   /@commitlint/config-validator/17.1.0:
@@ -1166,6 +1175,15 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       compare-func: 2.0.0
+      q: 1.5.1
+    dev: true
+
+  /conventional-changelog-conventionalcommits/5.0.0:
+    resolution: {integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==}
+    engines: {node: '>=10'}
+    dependencies:
+      compare-func: 2.0.0
+      lodash: 4.17.21
       q: 1.5.1
     dev: true
 
