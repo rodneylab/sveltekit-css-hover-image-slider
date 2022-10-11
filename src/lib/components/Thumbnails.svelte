@@ -3,8 +3,8 @@
 	import { getSrcset } from '$lib/utilities/image';
 
 	export let images: {
-		alt: any;
-		title: any;
+		alt: string;
+		title: string;
 		placeholder: string;
 		slug: string;
 		src: string;
