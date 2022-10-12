@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '@fontsource/figtree';
+	import '$lib/styles/global.css';
 	import Image from '$lib/components/Image.svelte';
 	import Thumbnails from '$lib/components/Thumbnails.svelte';
 	import type { PageData } from './$types';
