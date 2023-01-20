@@ -218,10 +218,9 @@
 			--lerp: var(--lerp-3);
 			z-index: 2;
 		}
-		.thumbnail:has(+ .thumbnail
-				+ .thumbnail
-				+ .thumbnail
-				+ :is(.thumbnail:hover, .thumbnail:focus-visible)),
+		.thumbnail:has(
+				+ .thumbnail + .thumbnail + .thumbnail + :is(.thumbnail:hover, .thumbnail:focus-visible)
+			),
 		:is(.thumbnail:hover, .thumbnail:focus-visible)
 			+ .thumbnail
 			+ .thumbnail
