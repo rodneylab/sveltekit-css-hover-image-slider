@@ -12,7 +12,7 @@ export async function base64(imageSource: string, width = 10): Promise<string> {
 			optimiseScans: true,
 			chromaSubsampling: '4:2:0',
 			trellisQuantisation: true,
-			quantisationTable: 2
+			quantisationTable: 2,
 		})
 		.toBuffer({ resolveWithObject: false });
 	const metadataPromise = image.metadata();

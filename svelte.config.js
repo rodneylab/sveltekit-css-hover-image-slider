@@ -1,6 +1,6 @@
+import cspDirectives from './csp-directives.mjs';
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
-import cspDirectives from './csp-directives.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,9 +12,9 @@ const config = {
 		adapter: adapter({ precompress: true }),
 		csp: {
 			mode: 'hash',
-			directives: cspDirectives
-		}
-	}
+			directives: cspDirectives,
+		},
+	},
 };
 
 export default config;

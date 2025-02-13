@@ -8,16 +8,16 @@ declare namespace App {
 	// interface Platform {}
 }
 
-export declare global {
-	declare namespace svelte.JSX {
-		interface HTMLProps<HTMLImageElement> {
-			fetchpriority?: 'auto' | 'high' | 'low';
-		}
-	}
-	declare namespace svelte.JSX {
-		interface HTMLProps<HTMLLinkElement> {
-			imagesrcset?: string;
-			imagesizes?: string;
-		}
-	}
-}
+// export declare global {
+// 	declare namespace svelte.JSX {
+// 		interface HTMLProps<HTMLImageElement> {
+// 			fetchpriority?: 'auto' | 'high' | 'low';
+// 		}
+// 	}
+// 	declare namespace svelte.JSX {
+// 		interface HTMLProps<HTMLLinkElement> {
+// 			imagesrcset?: string;
+// 			imagesizes?: string;
+// 		}
+// 	}
+// }

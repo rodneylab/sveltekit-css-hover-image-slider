@@ -8,7 +8,7 @@ const cspDirectives = {
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
-		"'self'"
+		"'self'",
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",
@@ -21,7 +21,7 @@ const cspDirectives = {
 	'style-src': ["'self'", "'unsafe-inline'"],
 	// 'style-src': ["'self'", "'unsafe-inline'", 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
 	'default-src': [
-		'self'
+		'self',
 		// 'https://*.google.com',
 		// 'https://*.googleapis.com',
 		// 'https://*.firebase.com',
@@ -34,7 +34,7 @@ const cspDirectives = {
 		// 'https://*.sentry.io',
 	],
 	'script-src': [
-		'self'
+		'self',
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',
@@ -43,7 +43,7 @@ const cspDirectives = {
 		// 'https://*.sentry.io',
 		// 'https://polyfill.io',
 	],
-	'worker-src': ["'self'"]
+	'worker-src': ["'self'"],
 };
 
 export default cspDirectives;

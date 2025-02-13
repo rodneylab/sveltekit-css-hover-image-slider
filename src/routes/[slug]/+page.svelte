@@ -1,16 +1,15 @@
 <script lang="ts">
-	import '@fontsource/figtree';
-	import '$lib/styles/global.css';
 	import Image from '$lib/components/Image.svelte';
 	import Thumbnails from '$lib/components/Thumbnails.svelte';
+	import '$lib/styles/global.css';
 	import type { PageData } from './$types';
+	import '@fontsource/figtree';
 
-	export let data: PageData;
+	let { data }: { data: PageData } = $props();
 
-	let { image, images } = data;
-	$: ({ image, images } = { ...data });
+	let { image, images } = $derived(data);
 
-	let currentSlug = image.slug;
+	let currentSlug = $derived(image.slug);
 </script>
 
 <svelte:head>

@@ -9,10 +9,10 @@ const config = {
 			features: {
 				'nesting-rules': true,
 				'custom-media-queries': true,
-				'media-query-ranges': true
-			}
-		})
-	]
+				'media-query-ranges': true,
+			},
+		}),
+	],
 };
 
 module.exports = config;

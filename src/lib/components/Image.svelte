@@ -2,41 +2,51 @@
 	import { getSrcset } from '$lib/utilities/image';
 	import '@fontsource/figtree';
 
-	export let image: {
-		alt: string;
-		credit: { name: string; profile: string };
-		title: string;
-		placeholder: string;
-		slug: string;
-		src: string;
-	};
+	let {
+		image,
+	}: {
+		image: {
+			alt: string;
+			credit: { name: string; profile: string };
+			title: string;
+			placeholder: string;
+			slug: string;
+			src: string;
+		};
+	} = $props();
 
 	let {
 		alt,
 		credit: { name: artist, profile },
-		src
-	} = image;
+		src,
+	} = $derived(image);
 
 	const densities = [1.0, 2.0];
 	const SIZES = [280, 374, 672, 768, 1024];
-	const avifSrcset = getSrcset({
-		densities,
-		format: 'avif',
-		sizes: SIZES,
-		src
-	});
-	const webpSrcset = getSrcset({
-		densities,
-		format: 'webp',
-		sizes: SIZES,
-		src
-	});
-	const jpgSrcset = getSrcset({
-		densities,
-		format: 'jpeg',
-		sizes: SIZES,
-		src
-	});
+	const avifSrcset = $derived(
+		getSrcset({
+			densities,
+			format: 'avif',
+			sizes: SIZES,
+			src,
+		}),
+	);
+	const webpSrcset = $derived(
+		getSrcset({
+			densities,
+			format: 'webp',
+			sizes: SIZES,
+			src,
+		}),
+	);
+	const jpgSrcset = $derived(
+		getSrcset({
+			densities,
+			format: 'jpeg',
+			sizes: SIZES,
+			src,
+		}),
+	);
 	const sizes =
 		'(max-width: 768px) 100vw, (max-width: 1024px) 672px, (max-width: 1280px) 768px, 1024px';
 </script>
