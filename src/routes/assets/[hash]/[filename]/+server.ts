@@ -1,13 +1,13 @@
+import type { RequestHandler } from './$types';
 import { error } from '@sveltejs/kit';
 import { createReadStream, statSync } from 'node:fs';
 import type { Readable } from 'node:stream';
 import { PassThrough } from 'node:stream';
 import { join } from 'path';
 import sharp from 'sharp';
-import type { RequestHandler } from './$types';
 
 async function metadata(
-	source: string
+	source: string,
 ): Promise<{ format?: string; width?: number; error?: string }> {
 	try {
 		const image = sharp(source);
@@ -73,7 +73,7 @@ export const GET: RequestHandler = async function get({ params, url, setHeaders 
 		setHeaders({
 			'Content-Type': `image/${outputFormat}`,
 			'Content-Disposition': `filename= ${filename.split('.')[0]}.${outputFormat}`,
-			'Cache-Control': 'public, max-age=31536000, immutable'
+			'Cache-Control': 'public, max-age=31536000, immutable',
 		});
 
 		return resize(readStream, outputWidth, outputFormat);

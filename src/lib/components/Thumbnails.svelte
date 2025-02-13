@@ -2,14 +2,19 @@
 	import scrollCurrentIntoView from '$lib/shared/actions/scrollCurrentIntoView';
 	import { getSrcset } from '$lib/utilities/image';
 
-	export let images: {
-		alt: string;
-		title: string;
-		placeholder: string;
-		slug: string;
-		src: string;
-	}[];
-	export let currentSlug: string;
+	let {
+		images,
+		currentSlug,
+	}: {
+		images: {
+			alt: string;
+			title: string;
+			placeholder: string;
+			slug: string;
+			src: string;
+		}[];
+		currentSlug: string;
+	} = $props();
 
 	const densities = [1.0, 2.0];
 	const THUMBNAIL_SIZES = [144, 307, 542];
@@ -18,25 +23,25 @@
 </script>
 
 <nav class="thumbnails">
-	<div aria-hidden="true" class="overscroller" />
+	<div aria-hidden="true" class="overscroller"></div>
 	{#each images as { alt, placeholder, src, slug }}
 		{@const avifThumbnailSrcset = getSrcset({
 			densities,
 			format: 'avif',
 			sizes: THUMBNAIL_SIZES,
-			src
+			src,
 		})}
 		{@const webpThumbnailSrcset = getSrcset({
 			densities,
 			format: 'webp',
 			sizes: THUMBNAIL_SIZES,
-			src
+			src,
 		})}
 		{@const jpgThumbnailSrcset = getSrcset({
 			densities,
 			format: 'jpeg',
 			sizes: THUMBNAIL_SIZES,
-			src
+			src,
 		})}
 		<a
 			use:scrollCurrentIntoView={slug === currentSlug}
@@ -63,7 +68,7 @@
 			>
 		</a>
 	{/each}
-	<div aria-hidden="true" class="overscroller" />
+	<div aria-hidden="true" class="overscroller"></div>
 </nav>
 
 <style lang="postcss">
@@ -203,21 +208,25 @@
 			--lerp: var(--lerp-0);
 			z-index: 5;
 		}
+		/* eslint-disable-next-line svelte/valid-compile */
 		.thumbnail:has(+ :is(.thumbnail:hover, .thumbnail:focus-visible)),
 		:is(.thumbnail:hover, .thumbnail:focus-visible) + .thumbnail {
 			--lerp: var(--lerp-1);
 			z-index: 4;
 		}
+		/* eslint-disable-next-line svelte/valid-compile */
 		.thumbnail:has(+ .thumbnail + :is(.thumbnail:hover, .thumbnail:focus-visible)),
 		:is(.thumbnail:hover, .thumbnail:focus-visible) + .thumbnail + .thumbnail {
 			--lerp: var(--lerp-2);
 			z-index: 3;
 		}
+		/* eslint-disable-next-line svelte/valid-compile */
 		.thumbnail:has(+ .thumbnail + .thumbnail + :is(.thumbnail:hover, .thumbnail:focus-visible)),
 		:is(.thumbnail:hover, .thumbnail:focus-visible) + .thumbnail + .thumbnail + .thumbnail {
 			--lerp: var(--lerp-3);
 			z-index: 2;
 		}
+		/* eslint-disable-next-line svelte/valid-compile */
 		.thumbnail:has(
 				+ .thumbnail + .thumbnail + .thumbnail + :is(.thumbnail:hover, .thumbnail:focus-visible)
 			),

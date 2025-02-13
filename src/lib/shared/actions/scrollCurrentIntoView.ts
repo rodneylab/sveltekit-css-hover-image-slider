@@ -5,7 +5,7 @@ function scrollCurrentIntoView(node: HTMLAnchorElement, current: boolean) {
 		node.scrollIntoView({
 			behavior: prefersReducedMotion ? 'auto' : 'smooth',
 			inline: 'center',
-			block: 'end'
+			block: 'end',
 		});
 	}
 }
